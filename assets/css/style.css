@@ -135,6 +135,7 @@ main#general {
 .main__header__top__div {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .logo__link {
@@ -188,6 +189,10 @@ main#general {
     display: none;
 }
 
+.hm__nav__item__link:hover {
+    color: var(--primary);
+}
+
 .main__body__banners {
     margin: 0px auto;
     background-color: transparent;
@@ -217,13 +222,15 @@ main#general {
     opacity: 1;
     visibility: inherit;
     z-index: 20;
+    position: relative;
 }
 
 .banner__info {
     display: grid;
     gap: 10px;
-    margin-top: 25%;
-    margin-left: 10%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
     color: #FFF;
 }
 
@@ -270,8 +277,9 @@ main#general {
 
 .about__section__one {
     margin-bottom: 70px;
-    display: grid;
+    display: flex;
     gap: 10px;
+    flex-direction: column;
 }
 
 .about__section__one__item {
@@ -302,12 +310,28 @@ main#general {
     transition: all 200ms ease-out 0s;
 }
 
+.about__section__one__item:hover {
+    background-color: var(--primary);
+    color: var(--white)!important;
+}
+
 .about__section__one__item h4 {
     text-transform: capitalize;
 }
 
+
+/* .about__section__one__item i:hover::before {
+    color: var(--white);
+} */
+
+
+/* .about__section__one__item h4:hover {
+    color: var(--white);
+} */
+
 .about__section__two {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     visibility: visible;
     animation-duration: 1000ms;
     animation-delay: 0ms;
@@ -372,8 +396,10 @@ main#general {
 }
 
 .about__text section {
-    display: grid;
+    display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .about__text section h5 {
@@ -634,6 +660,9 @@ img.footer__logo {
     .main__topbar__info__area {
         display: flex;
     }
+    .main__topbar__info__area a:first-child {
+        margin-right: 30px;
+    }
     .middle__phone,
     .main__topbar__info__btn {
         display: none;
@@ -656,12 +685,45 @@ img.footer__logo {
     .main__topbar__info__btn {
         display: flex;
     }
+    .main__topbar__info__btn {
+        align-items: center;
+        text-transform: capitalize;
+        padding: 14px 42px;
+        line-height: 26px;
+        background-color: var(--primary);
+        color: var(--white);
+        font-weight: 500;
+        overflow: hidden;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 1.5rem;
+        height: fit-content;
+    }
+    .logo {
+        height: 93px;
+    }
     .main__header__top {
         display: block;
         font-size: 14px;
         color: var(--white);
         padding: 7px 0;
         background-color: var(--secondary);
+    }
+    .hm__main__header__top__address {
+        padding-right: 20px;
+        position: relative;
+    }
+    .hm__main__header__top__email {
+        padding-left: 20px;
+    }
+    .hm__main__header__top__address:after {
+        background: var(--white);
+        content: "";
+        position: absolute;
+        height: 90%;
+        width: 1px;
+        right: 0;
+        top: 2px;
     }
     .main__menu__btn {
         display: none;
@@ -686,6 +748,40 @@ img.footer__logo {
         color: var(--white);
         font-weight: 500;
         font-size: 15px;
+    }
+    .main__body__banners {
+        height: 700px;
+    }
+    .banner__info {
+        gap: 40px;
+    }
+    .banner__info header {
+        font-size: 4em;
+        line-height: 60px;
+        width: 456px;
+    }
+    .banner__info div {
+        font-size: 1.3em;
+    }
+    .banner__info a {
+        font-size: 14px;
+    }
+    .about__section__one {
+        flex-direction: row;
+    }
+    .about__section__one__item {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .about__image,
+    .about__text {
+        width: 50%;
+    }
+    .about__text section {
+        flex-direction: row;
+    }
+    .about__text section h5 {
+        width: 31.33%;
     }
     /* ---------------------------------GENERAL--------------------------------------------------------------- */
     .container {
