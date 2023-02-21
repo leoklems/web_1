@@ -275,6 +275,20 @@ main#general {
     padding-top: 110px;
 }
 
+.about__text,
+.about__image,
+.team__block__images,
+.team__block__info,
+.testimonial__title__info,
+.testimonial__block__content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .about__section__one {
     margin-bottom: 70px;
     display: flex;
@@ -509,6 +523,7 @@ img.footer__logo {
 
 .footer__widget__contact__info {
     display: inline-block;
+    margin-bottom: 5px;
 }
 
 .footer__widget__contact__info a i,
@@ -758,7 +773,7 @@ img.footer__logo {
     .banner__info header {
         font-size: 4em;
         line-height: 60px;
-        width: 456px;
+        width: 461px;
     }
     .banner__info div {
         font-size: 1.3em;
@@ -775,13 +790,72 @@ img.footer__logo {
     }
     .about__image,
     .about__text {
-        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     .about__text section {
         flex-direction: row;
     }
     .about__text section h5 {
         width: 31.33%;
+    }
+    .about__text section h5:hover {
+        background: var(--primary);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        color: var(--white);
+    }
+    .main__body__course__of__study__container {
+        padding-bottom: 80px;
+        padding-top: 105px;
+    }
+    .team__block__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .testimonial__block__container {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .team__block__container section {
+        width: 50%;
+    }
+    .testimonial__title__info {
+        width: 40%;
+    }
+    .footer__main__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footer__col__1 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 15px;
+    }
+    .footer__col__2 {
+        flex: 0 0 16.666%;
+        max-width: 16.666%;
+        padding: 0 15px;
+    }
+    .footer__col__3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 15px;
+    }
+    .footer__col__4 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .widget__list__item {
+        padding: 5px 0;
     }
     /* ---------------------------------GENERAL--------------------------------------------------------------- */
     .container {
