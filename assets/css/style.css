@@ -641,11 +641,11 @@ img.footer__logo {
     margin-left: auto;
 }
 
-.fixed {
+.stick_top {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 25;
     -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
     -khtml-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
