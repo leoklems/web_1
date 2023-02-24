@@ -67,7 +67,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #002147;
+    color: var(--text__title__sec);
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
@@ -170,7 +170,7 @@ main#general {
     color: var(--text__gray);
 }
 
-.main__header__nav {
+.main__header__nav div {
     background-color: var(--secondary);
     transition: all 0.4s ease-out 0s;
     padding: 10px 0;
@@ -181,12 +181,36 @@ main#general {
     color: #FFF;
     cursor: pointer;
     display: block;
+    margin-left: 15px;
     padding: 12px 9px;
     width: fit-content;
 }
 
 .main__menu {
     display: none;
+    background: #0c1923 none repeat scroll 0 0;
+    float: left;
+    /* margin-top: 15px; */
+    position: absolute;
+    z-index: 30;
+}
+
+.main__menu__trigger {
+    display: unset;
+}
+
+.main__menu ul li a {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    color: var(--white);
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 9px 5%;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 12px;
 }
 
 .hm__nav__item__link:hover {
@@ -631,6 +655,270 @@ img.footer__logo {
 }
 
 
+/* -------------------------------COOPERATE_TRAINING--------------------------- */
+
+section.cooperate__slide__items {
+    background: url("/assets/images/about-banner.jpg");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+section.cooperate__slide__items:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #06060680;
+}
+
+.cooperate__slide__items div {
+    text-align: center;
+    padding: 69px 0px 77px 0px;
+    position: relative;
+}
+
+.cooperate__slide__items h2 {
+    font-size: 41px;
+    color: var(--white);
+    font-weight: 700;
+    margin: 31px 0px 7px 0px;
+    visibility: visible;
+    animation-duration: 2s;
+    animation-name: slideInLeft;
+    text-transform: capitalize;
+}
+
+.cooperate__slide__items ul li {
+    color: var(--primary);
+    margin-right: 9px;
+    display: inline-block;
+}
+
+.cooperate__slide__items ul li a {
+    color: var(--white);
+}
+
+.coorporate__training__info {
+    margin: 56px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cooporate__training__info__sec {
+    background-color: #fff;
+    padding: 34px;
+    transition: all 0.6s ease;
+    box-shadow: 0 0 11px rgb(0 0 0 / 10%);
+    min-height: 630px;
+}
+
+.coorporate__training__info__img {
+    background-image: url(/assets/images/corporate_training.jpg);
+    min-height: 630px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 11px rgb(0 0 0 / 10%);
+}
+
+.cooporate__training__info__sec h2 {
+    position: relative;
+    margin-bottom: 68px;
+    line-height: 46px;
+    font-weight: 800;
+    font-size: 2.3em;
+    text-transform: capitalize;
+}
+
+.cooporate__training__info__sec h2:before {
+    content: "";
+    background: var(--primary);
+    position: absolute;
+    height: 3px;
+    width: 85px;
+    bottom: -35px;
+    left: 0;
+}
+
+.cooporate__training__info__sec h2:after {
+    background: var(--text__title__sec);
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 20px;
+    bottom: -40px;
+    left: 0;
+}
+
+.cooporate__training__info__sec ul li {
+    margin-bottom: 9px;
+    position: relative;
+    margin-left: 26px;
+}
+
+.cooporate__training__info__sec ul li:before {
+    content: "\f0a4";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    left: -26px;
+}
+
+.coorporate__training__info__contact {
+    margin: 74px 0px 90px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.coorporate__training__contact__form__div {
+    padding: 34px;
+    transition: all 0.6s ease;
+    box-shadow: 0 0 11px rgb(0 0 0 / 10%);
+}
+
+.coorporate__training__contact__form h2 {
+    position: relative;
+    margin-bottom: 83px;
+    font-weight: 800;
+    font-size: 2.3em;
+    text-transform: capitalize;
+    line-height: 46px;
+}
+
+.coorporate__training__contact__form h2:before {
+    content: "";
+    background: var(--primary);
+    position: absolute;
+    height: 3px;
+    width: 85px;
+    bottom: -35px;
+    left: 0;
+}
+
+.coorporate__training__contact__form h2:after {
+    background: var(--text__title__sec);
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 20px;
+    bottom: -40px;
+    left: 0;
+}
+
+.coorporate__training__contact__form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form_control {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #dfdce6;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif;
+    color: #243b60;
+    height: auto;
+    padding: 20px;
+    resize: none;
+    min-width: 100%;
+    height: 56px;
+}
+
+.form__submit__btn {
+    background-color: var(--primary);
+    padding: 13px 37px;
+    border-radius: 5px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    margin: 30px 0px 35px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    width: fit-content;
+}
+
+.coorporate__training__contact__us__div {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 1px;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+}
+
+.coorporate__training__contact__us__div div {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: #F4F5F8;
+    border: 1px solid #eee;
+}
+
+.coorporate__training__contact__us__div h4 {
+    position: relative;
+    margin-left: 12px;
+    margin-bottom: 6px;
+}
+
+.coorporate__training__contact__us__div h4:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 5px;
+    left: -13px;
+    top: 5px;
+    background: var(--primary);
+}
+
+.coorporate__training__contact__us__div ul li {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.coorporate__training__contact__us__div ul li span {
+    margin-right: 7px;
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cooperate__training__social__link {
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-right: 6px;
+}
+
+.cooperate__training__social__list i {
+    background-color: var(--primary);
+    empty-cells: 30px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    color: #fffdfd;
+    font-size: 16px;
+    transition: all 0.6s ease;
+}
+
+
 /* -------------------------------GENERAL SUPER-------------------------- */
 
 .container {
@@ -664,6 +952,32 @@ img.footer__logo {
     animation-name: fadeInUp;
 }
 
+@keyframes slideInLeft {
+    0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+}
+
+
+/* ---------------------------------SPECIAL CASES--------------------------- */
+
+.main__menu {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 @media (min-width: 600px) {
     /* tablets */
     .main__header__top__div {
@@ -681,6 +995,40 @@ img.footer__logo {
     .middle__phone,
     .main__topbar__info__btn {
         display: none;
+    }
+    /* ----------------CORPORATE_TRAINING-------------- */
+    .main__menu__btn {
+        margin-left: 60px;
+    }
+    .main__menu {
+        width: calc(100% - 120px);
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .coorporate__training__info__contact {
+        flex-direction: row;
+    }
+    .coorporate__training__contact__form__div__touch {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .coorporate__training__contact__us__div {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     /* ---------------------------------GENERAL--------------------------------------------------------------- */
     .container {
@@ -740,11 +1088,20 @@ img.footer__logo {
         right: 0;
         top: 2px;
     }
-    .main__menu__btn {
+    .main__menu__btn__div {
         display: none;
     }
+    /* .main__menu__btn {
+        display: none;
+    } */
     .main__menu {
         display: unset;
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+        background: var(--secondary) scroll 0 0;
+        padding-left: 120px;
+        padding-right: 120px;
     }
     .main__menu ul li {
         display: inline-block;
@@ -759,10 +1116,11 @@ img.footer__logo {
     }
     .main__menu ul li a {
         padding: 16px 2px;
-        display: block;
-        color: var(--white);
         font-weight: 500;
         font-size: 15px;
+        border-top: unset;
+        width: unset;
+        text-transform: capitalize;
     }
     .main__body__banners {
         height: 700px;
@@ -856,6 +1214,18 @@ img.footer__logo {
     }
     .widget__list__item {
         padding: 5px 0;
+    }
+    /* ------------------------------------COPORATE TRAINING---------------------------------------- */
+    .coorporate__training__info {
+        margin: 56px 0px 30px 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .coorporate__training__info__img,
+    .cooporate__training__info__sec {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     /* ---------------------------------GENERAL--------------------------------------------------------------- */
     .container {

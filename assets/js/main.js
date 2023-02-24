@@ -1,3 +1,13 @@
+$(document).ready(function() {
+    $("#main__menu__btn").click(function(event) {
+        event.preventDefault();
+        $('.main__menu').toggleClass('main__menu__trigger');
+        $('.fa-list').toggleClass('fa-times');
+        // $('.hm__menu__btn').toggleClass('hm__menu__btn__trig');
+
+    })
+});
+
 (function($) {
     "use strict";
 
