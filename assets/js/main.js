@@ -6,6 +6,7 @@ $(document).ready(function() {
         // $('.hm__menu__btn').toggleClass('hm__menu__btn__trig');
 
     })
+    currentSlide();
 });
 
 (function($) {
@@ -22,14 +23,14 @@ $(document).ready(function() {
             sticky__layers.addClass('stick_top');
         }
     });
-    currentSlide();
+    // currentSlide();
 
 
 }(jQuery));
 
 /*=============================================*/
 
-let slideIndex = 0;
+var slideIndex = 0;
 
 function plusSlides(n) {
 

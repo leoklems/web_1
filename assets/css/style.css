@@ -19,9 +19,9 @@
 }
 
  :root {
-    --primary: #ffb901;
-    --secondary: #253a97;
-    --text__title__sec: #002147;
+    --primary: #e11b48;
+    --secondary: #77c8a1;
+    --text__title__sec: #258f5c;
     --tertiary: #4a89ac;
     --background: #fff;
     --dates: #424643;
@@ -238,7 +238,7 @@ main#general {
 #main__body__slide__1 {
     background-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
-    background-image: url(/assets/images/slider-01.jpg);
+    /* background-image: url(/assets/images/slider-01.jpg); */
     background-size: cover;
     background-position: center 30%;
     width: 100%;
@@ -411,7 +411,7 @@ main#general {
 
 .text__underlined:before {
     content: "";
-    background: #ffb901;
+    background: var(--primary);
     position: absolute;
     height: 3px;
     width: 85px;
@@ -420,7 +420,7 @@ main#general {
 }
 
 .text__underlined:after {
-    background: #002147;
+    background: var(--secondary);
     position: absolute;
     content: "";
     height: 14px;
@@ -500,7 +500,7 @@ main#general {
 
 .btn__link__area .btn__links.btn__prev i {
     font-size: 30px;
-    color: #ffb901;
+    color: var(--primary);
     border-radius: 40px;
     background-color: white;
 }
@@ -515,7 +515,7 @@ main#general {
 
 .btn__link__area .btn__links.btn__next i {
     font-size: 30px;
-    color: #ffb901;
+    color: var(--primary);
     border-radius: 40px;
     background-color: white;
 }
@@ -597,7 +597,7 @@ img.footer__logo {
     width: 5px;
     left: 0;
     top: 3px;
-    background: #feb800;
+    background: var(--primary);
 }
 
 .widget__list__title {
