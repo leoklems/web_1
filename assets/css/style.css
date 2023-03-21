@@ -1,3 +1,7 @@
+{
+    % load static %
+}
+
 @font-face {
     font-family: 'Acens';
     src: url('Acens/Acens.ttf.woff') format('woff2');
@@ -199,7 +203,7 @@ main#general {
     display: unset;
 }
 
-.main__menu ul li a {
+.hm__nav__item__link {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     color: var(--white);
     display: block;
@@ -213,8 +217,38 @@ main#general {
     font-size: 12px;
 }
 
-.hm__nav__item__link:hover {
+.hm__nav__item__link:hover,
+.hm_nav_cat_item_link:hover {
     color: var(--primary);
+}
+
+.course__nav__items {
+    display: none;
+}
+
+.course__nav__items__triggered {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr;
+    /*padding-left: 10px;
+    border-radius: 5px;
+    background: #f7fafb;*/
+    text-transform: capitalize;
+}
+
+.course__nav__items__triggered {
+    padding: 10px;
+}
+
+.hm_nav_cat_item {
+    display: block;
+    margin: 0;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .main__body__banners {
@@ -375,18 +409,6 @@ main#general {
     animation-delay: 0ms;
     animation-name: fadeInLeft;
     padding-bottom: 40px;
-}
-
-.about__image:before {
-    background-image: url(/assets/images/crical-border.png);
-    content: "";
-    height: 185px;
-    width: 200px;
-    position: absolute;
-    /* top: 10px; */
-    left: 10px;
-    background-repeat: no-repeat;
-    animation: spinInfinit 6000ms infinite linear;
 }
 
 .about__img {
@@ -919,6 +941,80 @@ section.cooperate__slide__items:before {
 }
 
 
+/* -------------------------------COURSE--------------------------- */
+
+.course__dp__img {
+    width: 100%;
+}
+
+.course__benefits {
+    width: 100%;
+    background-color: #fff;
+    /* padding: 34px; */
+    transition: all 0.6s ease;
+    /* box-shadow: 0 0 11px rgb(0 0 0 / 10%); */
+    /* min-height: 630px; */
+}
+
+.course__benefits h2 {
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 46px;
+    font-weight: 800;
+    font-size: 2.3em;
+    text-transform: capitalize;
+}
+
+.course__benefits ul li {
+    margin-bottom: 9px;
+    position: relative;
+    margin-left: 26px;
+}
+
+.course__benefits ul li:before {
+    content: "\f0a4";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    left: -26px;
+}
+
+.register__btn {
+    margin-top: 11px;
+    background: var(--primary);
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--white);
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 26px;
+    padding: 10px 28px;
+    font-size: 0.9em;
+}
+
+.register__btn__2 {
+    margin-top: 11px;
+    background: var(--secondary);
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--white);
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 26px;
+    padding: 10px 28px;
+    font-size: 0.9em;
+}
+
+
 /* -------------------------------GENERAL SUPER-------------------------- */
 
 .container {
@@ -1103,7 +1199,10 @@ section.cooperate__slide__items:before {
         padding-left: 120px;
         padding-right: 120px;
     }
-    .main__menu ul li {
+    #main__nav__list {
+        display: flex;
+    }
+    .main__nav__list__item {
         display: inline-block;
         margin-right: 18px;
         position: relative;
@@ -1114,13 +1213,28 @@ section.cooperate__slide__items:before {
         transition: all 300ms ease-out 0s;
         text-transform: capitalize;
     }
-    .main__menu ul li a {
+    .hm__nav__item__link {
         padding: 16px 2px;
         font-weight: 500;
         font-size: 15px;
         border-top: unset;
         width: unset;
         text-transform: capitalize;
+    }
+    .course__nav__items__triggered {
+        margin-top: 51px;
+        position: absolute;
+        padding: unset;
+        width: 220px;
+        background: var(--secondary);
+        z-index: 2;
+    }
+    .course__nav__items__triggered li a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .course__nav__items a {
+        padding: 0;
     }
     .main__body__banners {
         height: 700px;
@@ -1226,6 +1340,9 @@ section.cooperate__slide__items:before {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
+    }
+    .cooperate__slide__banner {
+        margin: 51px 0px 77px 0px;
     }
     /* ---------------------------------GENERAL--------------------------------------------------------------- */
     .container {
