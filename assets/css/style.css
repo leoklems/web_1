@@ -27,6 +27,7 @@
     --secondary: #77c8a1;
     --text__title__sec: #258f5c;
     --tertiary: #4a89ac;
+    --borders: #dfdce6;
     --background: #fff;
     --dates: #424643;
     --text-color: #f688ff;
@@ -1015,6 +1016,119 @@ section.cooperate__slide__items:before {
 }
 
 
+/* -------------------------------REGISTER FORM--------------------------- */
+
+.course__reg {
+    margin: auto;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+.course__reg__form h2 {
+    position: relative;
+    margin-bottom: 63px;
+    margin-top: 33px;
+}
+
+.course__reg__form h2:before {
+    content: "";
+    background: var(--primary);
+    position: absolute;
+    height: 3px;
+    width: 85px;
+    bottom: -24px;
+    left: 0;
+}
+
+.course__reg__form h2:after {
+    background: var(--secondary);
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 20px;
+    bottom: -29px;
+    left: 0;
+}
+
+.course__reg__form__divs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.form__full__width,
+.form__half__width,
+.course__submit {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.course__reg__form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text__gray);
+    margin: 12px 0px 8px 0px;
+}
+
+.course__reg__form select {
+    width: 100%;
+    padding: 6px 22px;
+    font-size: 16px;
+    border: 1px solid #dfdce6;
+    background: url(../images/down-arrow.png) no-repeat right #fff;
+    outline: none;
+    height: 50px;
+    color: #000;
+    font-size: 16px;
+    color: #777373;
+    background-position: 98% 53%;
+    box-shadow: none;
+    margin-bottom: 6px;
+}
+
+.course__form__input {
+    width: 100%;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--borders);
+    background: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif;
+    color: var(--secondary);
+    height: auto;
+    padding: 20px;
+    resize: none;
+    min-width: 100%;
+    height: 56px;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.course__submit__btn {
+    text-transform: capitalize;
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 1em;
+    border: 1px solid var(--text__gray);
+}
+
+@media (min-width: 600px) {
+    /* tablets */
+}
+
+
 /* -------------------------------GENERAL SUPER-------------------------- */
 
 .container {
@@ -1125,6 +1239,15 @@ section.cooperate__slide__items:before {
         min-height: 1px;
         padding-right: 15px;
         padding-left: 15px;
+    }
+    /* ----------------------------------REGISTER FORM --------------------------------------------------- */
+    .course__reg {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .form__half__width {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
     /* ---------------------------------GENERAL--------------------------------------------------------------- */
     .container {
@@ -1344,6 +1467,7 @@ section.cooperate__slide__items:before {
     .cooperate__slide__banner {
         margin: 51px 0px 77px 0px;
     }
+    /* ----------------------------------REGISTER FORM --------------------------------------------------- */
     /* ---------------------------------GENERAL--------------------------------------------------------------- */
     .container {
         padding-left: 120px;
